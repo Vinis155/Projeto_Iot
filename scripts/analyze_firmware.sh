@@ -16,7 +16,7 @@ HASH=$(sha256sum "$ORIG" | awk '{print $1}')
   echo "arquivo : $NAME"
   echo "tamanho : $SIZE bytes"
   echo "data    : $DATE"
-  echo "origem  : (preencha: ex. Wokwi, F1 > Download firmware, link do projeto)"
+  echo "origem  : ${ORIGEM:-(preencha: ex. Wokwi, F1 > Download firmware, link do projeto)}"
   echo "sha256  : $HASH"
 } > firmware/hashes.txt
 chmod a-w "$ORIG"          # original somente leitura

@@ -1,0 +1,1 @@
+esptool nao encontrado (pip install esptool)

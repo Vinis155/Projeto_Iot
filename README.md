@@ -1,7 +1,5 @@
 # NexaHome – Avaliação de Segurança do NexaSense (IoT)
 
-> **Preencha os trechos marcados com `[ ]` depois de executar os testes. Não deixe nada que você não tenha executado.**
-
 ## 1. Objetivo
 Avaliar a superfície de ataque do protótipo NexaSense (ESP32 + sensor de temperatura/umidade + Wi-Fi/MQTT), cobrindo hardware, firmware, comunicação e acesso físico, e propor mitigações e hardening para uma versão comercial.
 
@@ -21,7 +19,7 @@ Avaliar a superfície de ataque do protótipo NexaSense (ESP32 + sensor de tempe
 Ver `architecture/architecture-diagram.png`.
 
 ## 5. Ferramentas utilizadas
-Wokwi (simulador), Wireshark, esptool, `strings`, `sha256sum`, binwalk (opcional). `[ ] ajuste conforme o que usou`
+Wokwi (simulador), `strings`, `sha256sum`, scripts Python próprios (`parse_esp_image.py`, `analyze_pcap.py`). esptool v5.6.0 (`image-info`). Wireshark 4.6.9 (prints E05 e E06).
 
 ## 6. Organização das evidências
 | Pasta | Conteúdo |
@@ -30,17 +28,17 @@ Wokwi (simulador), Wireshark, esptool, `strings`, `sha256sum`, binwalk (opcional
 | `firmware/` | Imagem original (somente leitura), `hashes.txt`, saídas de análise em `work/`, `analysis-notes.md` |
 | `hardware/` | `interface-map.md` e capturas da UART em `evidence/` |
 | `network/` | `protocol-analysis.md`, `.pcap` e capturas em `evidence/` |
-| `findings/` | `findings.md` (tabela de achados e demonstração controlada) |
+| `findings/` | `findings.md` (tabela de achados e demonstração controlada), `caso-real.md` (CVE-2019-15894) |
 | `remediation/` | `hardening-plan.md` |
 | `scripts/` | `analyze_firmware.sh` |
 
 ## 7. Resumos
-- **Firmware:** `[ ] 3-5 linhas com o que encontrou (formato, strings relevantes, URL de OTA)`
-- **Hardware:** `[ ] 3-5 linhas`
-- **Protocolos:** `[ ] 3-5 linhas`
+- **Firmware:** imagem de aplicação ESP32 de 904.416 bytes (SHA-256 em `firmware/hashes.txt`), sem assinatura de Secure Boot. As strings revelam a credencial MQTT, o broker, a URL de OTA em HTTP e mensagens de debug.
+- **Hardware:** só a UART foi observada na simulação (log da ROM e console `help/cfg` sem autenticação). JTAG, modo de download e flash foram analisados de forma documental.
+- **Protocolos:** MQTT 3.1.1 na porta 1883, sem TLS. O PCAP mostra usuário e senha em texto claro nos pacotes CONNECT e a telemetria legível nos PUBLISH.
 
 ## 8. Principais achados e recomendações
-`[ ] copie o resumo da tabela de findings/findings.md`
+F01 a F04 confirmados com evidência; F05 e F06 parciais (análise de código e strings, sem teste de ataque); F07 documental. Detalhes em `findings/findings.md`.
 
 ## 9. Como reproduzir
 1. Criar um projeto ESP32 no Wokwi, montar o circuito (DHT22 → GPIO4) e colar `simulation/wokwi/sketch.ino` e `libraries.txt`.

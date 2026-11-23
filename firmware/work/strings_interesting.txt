@@ -1,0 +1,108 @@
+[DBG] ===== CONFIG DO DISPOSITIVO =====
+[DBG] fw_version = %s
+[DBG] device_id  = %s
+[DBG] mac        = %s
+[DBG] chip       = %s rev %d
+[DBG] flash      = %u bytes
+[DBG] wifi_ssid  = %s
+[DBG] mqtt_host  = %s:%d
+[DBG] mqtt_user  = %s
+[DBG] mqtt_pass  = %s
+[DBG] ota_url    = %s
+[DBG] ==================================
+[OTA] Consultando %s (HTTP, sem TLS)
+[OTA] Nova imagem recebida (simulado)
+[OTA] Gravando na particao OTA sem verificar assinatura/hash (simulado)
+[OTA] Atualizacao concluida, reiniciando... (simulado)
+[MQTT] cmd recebido em %s: %s
+[MQTT] Conectando em %s:%d user=%s pass=%s
+[MQTT] Conectado
+[MQTT] Falhou rc=%d, nova tentativa em 3s
+=== NexaSense 0.3.1-proto (build de desenvolvimento) ===
+[DBG] comandos: help | cfg | ota | reboot
+[DBG] comando desconhecido: %s
+[MQTT] publicado: %s
+nexahome-lab/Vinis/nexasense-001/cmd
+nexahome-lab/Vinis/nexasense-001/telemetry
+http://updates.nexahome.lab/nexasense/latest.bin
+nexasense-001
+Nexa@2024-lab
+nexasense
+broker.hivemq.com
+  Total Size        : %8lu B (%6.1f KB)
+, subtype: OTA_%u
+NVS_KEYS
+esp_ota_ops
+E (%lu) %s: not found otadata
+E (%lu) %s: mmap otadata filed. Err=0x%8x
+//IDF/components/app_update/esp_ota_ops.c
+ota_app_count < 16 && "must erase the partition before writing to it"
+E (%lu) %s: %s(%d): user is already subscribed
+E (%lu) %s: %s(%d): user not found
+Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+ESP_ERR_NVS_KEY_TOO_LONG
+ESP_ERR_NVS_KEYS_NOT_INITIALIZED
+ESP_ERR_NVS_CORRUPT_KEY_PART
+ESP_ERR_OTA_BASE
+ESP_ERR_OTA_PARTITION_CONFLICT
+ESP_ERR_OTA_SELECT_INFO_INVALID
+ESP_ERR_OTA_VALIDATE_FAILED
+ESP_ERR_OTA_SMALL_SEC_VER
+ESP_ERR_OTA_ROLLBACK_FAILED
+ESP_ERR_OTA_ROLLBACK_INVALID_STATE
+ESP_ERR_NOT_ENOUGH_UNUSED_KEY_BLOCKS
+ESP_ERR_WIFI_SSID
+ESP_ERR_WIFI_PASSWORD
+ESP_ERR_MBEDTLS_PK_PARSE_KEY_FAILED
+ESP_ERR_WOLFSSL_KEY_VERIFY_SETUP_FAILED
+ESP_ERR_HTTPS_OTA_BASE
+ESP_ERR_HTTPS_OTA_IN_PROGRESS
+ESP_ERR_HW_CRYPTO_DS_INVALID_KEY
+E (%lu) %s: %s(%d): Failed to initialize pthread key
+User request
+E (%lu) %s: dhcps cb: failed to post IP_EVENT_AP_STAIPASSIGNED (%x)
+E (%lu) %s: %s: Failed to configure netif with config=%p (config or if_key is NULL or duplicate key)
+Group key expansion
+IGTK key expansion
+Pairwise key expansion
+SAE-PK keys
+OWE Key Generation
+pbeWithSHAAnd3-KeyTripleDES-CBC
+PBE with SHA1 and 3-Key 3DES
+pbeWithSHAAnd2-KeyTripleDES-CBC
+PBE with SHA1 and 2-Key 3DES
+id-ecPublicKey
+Generic EC key
+EC key for ECDH
+id-ce-keyUsage
+id-ce-extKeyUsage
+Extended Key Usage
+id-ce-subjectKeyIdentifier
+Subject Key Identifier
+id-ce-authorityKeyIdentifier
+Authority Key Identifier
+User Id
+eckey.Q
+-----END RSA PUBLIC KEY-----
+-----BEGIN RSA PUBLIC KEY-----
+-----END PUBLIC KEY-----
+-----BEGIN PUBLIC KEY-----
+sta.ssid
+bssid.set
+sta.bssid
+ap.ssid
+ap.passwd
+ap.gtk_rekey
+passive
+from user
+esp_ota_get_running_partition
+esp_ota_get_app_partition_count
+esp_core_dump_get_user_ram_info
+elf_write_core_dump_user_data
+esp_core_dump_do_write_elf_pass
+addba response cb: bssid change from %02x:%02x:%02x:%02x:%02x:%02x to %02x:%02x:%02x:%02x:%02x:%02x
+invalid wifi nvs key index %d
+failed to get bss for bssid=%02x:%02x:%02x:%02x:%02x:%02x
+AP's AKM suite is 'SAE Extended Key' but %s does not have H2E enabled
+total_pwr=%ld, min=%ld, max=%ld, rftx=0x%x, att=%d, dc_i=%d, dc_q=%d
+total_power=%lld, sig_power=%lld, dc_power=%lld, noise_power=%lld

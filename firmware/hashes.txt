@@ -1,0 +1,6 @@
+arquivo : firmware-esp32.bin
+tamanho : 904416 bytes
+data    : 2026-11-12 12:02:04 UTC
+origem  : Wokwi (simulador online), editor: F1 > Download Firmware, após compilar o projeto
+sha256  : ab7c5a880988dd8fc9407f45904bf3bdf89ba1d26d8fd79ea84f67d160c2db13
+copia_de_trabalho_sha256_confere : SIM

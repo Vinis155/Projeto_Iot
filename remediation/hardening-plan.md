@@ -14,4 +14,4 @@
 | P3 | Processo de gestão de vulnerabilidades e documentação da superfície de ataque | — | ETSI EN 303 645; OWASP ISTG |
 
 ## Ordem de implantação sugerida
-`[ ] justifique em 3-4 linhas por que P1 vem primeiro (impacto x esforço)`
+As medidas P1 vêm primeiro porque tratam os achados de maior risco (F01, F02, F05) com bom custo-benefício: TLS e credenciais por dispositivo são mudanças de firmware e backend, sem alterar o hardware. Secure Boot e OTA assinada protegem contra a substituição do firmware e precisam estar ativos antes da produção em escala, já que os eFuses são irreversíveis. As medidas P2 (Flash Encryption, desabilitar JTAG e modo de download, remover o console) dependem de decisões de manufatura e são aplicadas na gravação final dos dispositivos. A P3 (gestão de vulnerabilidades) é um processo contínuo, iniciado em paralelo.

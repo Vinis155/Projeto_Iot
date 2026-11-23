@@ -1,0 +1,59 @@
+arquivo: network/evidence/wokwi.pcap | linktype=105 (105 = IEEE 802.11) | quadros=1759
+duracao: 148.0 s (timestamps do Wokwi sao relativos ao inicio da simulacao)
+
+== Tipos de quadro 802.11 ==
+  gerenciamento: 1488
+  dados: 271
+  eth 0x0806: 12
+
+== Fluxos (top 12) ==
+    29  TCP 18.197.179.222:1883 -> 10.10.0.2:60952
+    27  TCP 10.10.0.2:60952 -> 18.197.179.222:1883
+    15  TCP 18.197.179.222:1883 -> 10.10.0.2:60949
+    14  TCP 10.10.0.2:60949 -> 18.197.179.222:1883
+    12  TCP 10.10.0.2:60954 -> 18.197.179.222:1883
+    12  TCP 18.197.179.222:1883 -> 10.10.0.2:60954
+    10  TCP 10.10.0.2:60953 -> 3.68.133.207:1883
+    10  TCP 3.68.133.207:1883 -> 10.10.0.2:60953
+     9  TCP 10.10.0.2:60951 -> 63.185.133.90:1883
+     9  TCP 63.185.133.90:1883 -> 10.10.0.2:60951
+     8  TCP 10.10.0.2:60950 -> 63.185.133.90:1883
+     8  TCP 63.185.133.90:1883 -> 10.10.0.2:60950
+
+== DNS consultado ==
+   broker.hivemq.com
+   resposta DNS broker.hivemq.com (3 registros)
+
+== MQTT: contagem por tipo ==
+  PUBLISH: 28
+  PINGRESP: 8
+  SUBACK: 7
+  CONNECT: 6
+  CONNACK: 6
+  SUBSCRIBE: 6
+  PINGREQ: 5
+
+== MQTT CONNECT (texto claro) ==
+  t=5.2s 10.10.0.2 -> 18.197.179.222 proto=MQTT v4 client_id='nexasense-001' user='nexasense' password='Nexa@2024-lab'
+  t=26.0s 10.10.0.2 -> 63.185.133.90 proto=MQTT v4 client_id='nexasense-001' user='nexasense' password='Nexa@2024-lab'
+  t=35.7s 10.10.0.2 -> 63.185.133.90 proto=MQTT v4 client_id='nexasense-001' user='nexasense' password='Nexa@2024-lab'
+  t=47.4s 10.10.0.2 -> 18.197.179.222 proto=MQTT v4 client_id='nexasense-001' user='nexasense' password='Nexa@2024-lab'
+  t=108.8s 10.10.0.2 -> 3.68.133.207 proto=MQTT v4 client_id='nexasense-001' user='nexasense' password='Nexa@2024-lab'
+  t=123.9s 10.10.0.2 -> 18.197.179.222 proto=MQTT v4 client_id='nexasense-001' user='nexasense' password='Nexa@2024-lab'
+
+== MQTT SUBSCRIBE ==
+  t=5.4s 10.10.0.2 topico='nexahome-lab/Vinis/nexasense-001/cmd'
+  t=27.2s 10.10.0.2 topico='nexahome-lab/Vinis/nexasense-001/cmd'
+  t=36.7s 10.10.0.2 topico='nexahome-lab/Vinis/nexasense-001/cmd'
+  t=48.4s 10.10.0.2 topico='nexahome-lab/Vinis/nexasense-001/cmd'
+  t=108.9s 10.10.0.2 topico='nexahome-lab/Vinis/nexasense-001/cmd'
+
+== MQTT PUBLISH (total 28; primeiros 3 e ultimo) ==
+  t=5.5s 10.10.0.2 -> 18.197.179.222 topico='nexahome-lab/Vinis/nexasense-001/telemetry'
+      payload={"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}
+  t=10.4s 10.10.0.2 -> 18.197.179.222 topico='nexahome-lab/Vinis/nexasense-001/telemetry'
+      payload={"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}
+  t=15.4s 10.10.0.2 -> 18.197.179.222 topico='nexahome-lab/Vinis/nexasense-001/telemetry'
+      payload={"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}
+  t=144.0s 10.10.0.2 -> 18.197.179.222 topico='nexahome-lab/Vinis/nexasense-001/telemetry'
+      payload={"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}

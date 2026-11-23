@@ -1,0 +1,35 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1156
+load:0x40078000,len:11456
+ho 0 tail 12 room 4
+load:0x40080400,len:2972
+entry 0x400805dc
+
+=== NexaSense 0.3.1-proto (build de desenvolvimento) ===
+[BOOT] Console de debug ativo. Digite 'help'.
+[WIFI] Conectando em Wokwi-GUEST ...
+.........
+[WIFI] Conectado. IP=10.10.0.2 MAC=24:0A:C4:00:01:10
+[DBG] ===== CONFIG DO DISPOSITIVO =====
+[DBG] fw_version = 0.3.1-proto
+[DBG] device_id  = nexasense-001
+[DBG] mac        = 24:0A:C4:00:01:10
+[DBG] chip       = ESP32-D0WDQ6-V3 rev 300
+[DBG] flash      = 4194304 bytes
+[DBG] wifi_ssid  = Wokwi-GUEST
+[DBG] mqtt_host  = broker.hivemq.com:1883
+[DBG] mqtt_user  = nexasense
+[DBG] mqtt_pass  = Nexa@2024-lab
+[DBG] ota_url    = http://updates.nexahome.lab/nexasense/latest.bin
+[DBG] ==================================
+[MQTT] Conectando em broker.hivemq.com:1883 user=nexasense pass=Nexa@2024-lab
+[MQTT] Conectado
+[MQTT] publicado: {"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}
+[MQTT] publicado: {"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}
+[MQTT] publicado: {"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}
+[MQTT] publicado: {"device":"nexasense-001","mac":"24:0A:C4:00:01:10","fw":"0.3.1-proto","temp":24.0,"hum":40.0}

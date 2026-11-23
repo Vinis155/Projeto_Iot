@@ -1,0 +1,18 @@
+tamanho_arquivo     : 904416 bytes
+segmentos           : 6
+flash_mode          : DIO
+flash_size / freq   : 4MB / 80MHz
+entry_point         : 0x40081BCC
+chip_id             : 0x0000 (0x0000 = ESP32)
+digest_sha256_anexado: sim
+  seg0: load=0x3F400020 tamanho= 120312 offset_dados=0x20 (esptool mostra o do cabecalho do segmento: 0x18)
+  seg1: load=0x3FFBDB60 tamanho=  10744 offset_dados=0x1D620 (esptool mostra o do cabecalho do segmento: 0x1D618)
+  seg2: load=0x400D0020 tamanho= 675996 offset_dados=0x20020 (esptool mostra o do cabecalho do segmento: 0x20018)
+  seg3: load=0x3FFC0558 tamanho=  13224 offset_dados=0xC50C4 (esptool mostra o do cabecalho do segmento: 0xC50BC)
+  seg4: load=0x40080000 tamanho=  84000 offset_dados=0xC8474 (esptool mostra o do cabecalho do segmento: 0xC846C)
+  seg5: load=0x50000200 tamanho=     32 offset_dados=0xDCC9C (esptool mostra o do cabecalho do segmento: 0xDCC94)
+fim_dos_segmentos   : 904380
+bytes_apos_segmentos: 36 (padding+checksum 1-16 B + digest 32 B; se houvesse assinatura Secure Boot v2 haveria ~1 KB a mais)
+sha256_anexado      : a0088ca6f060fcc6babd0f4281d03c0528897481f474309449b5c700e5ce3ba7
+sha256_confere      : SIM (verifica integridade, NAO autenticidade)
+descritor_app       : projeto=arduino-lib-builder versao=6671d0b
